@@ -3,7 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   // nome dell component
   selector: 'gmap',
-  template:
-    '<img src="https://maps.googleapis.com/maps/api/staticmap?center=42,14&zoom=4&size=400x100&key=AIzaSyCbWfkML0gxbVYUs92XkMTWXsritcRxUmk">',
+  template: `=>
+    <img
+      src="https://maps.googleapis.com/maps/api/staticmap?center=42,14&zoom=4&size=400x100&key="
+    />`,
+  inputs: ['lat', 'lng'],
 })
 export class MapComponent {}
