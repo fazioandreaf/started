@@ -1,5 +1,4 @@
 <h1>Start learn</h1>
+<tabbar [items]="countries" (onTabClick)="updatemap($event)"></tabbar>
 <gmap [lat]="mylat" [lng]="mylng"> </gmap>
-<button class="btn btn-success" (click)="updatemap()">
-  {{ mylat }}->{{ mylng }}
-</button>
+<button class="btn btn-success">{{ mylat }}->{{ mylng }}</button>
