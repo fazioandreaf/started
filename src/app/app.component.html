@@ -1,2 +1,5 @@
 <h1>Start learn</h1>
-<gmap lat="45" lng="10"> </gmap>
+<gmap [lat]="mylat" [lng]="mylng"> </gmap>
+<button class="btn btn-success" (click)="updatemap()">
+  {{ mylat }}->{{ mylng }}
+</button>
