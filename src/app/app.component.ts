@@ -10,7 +10,7 @@ export class AppComponent {
   countries: Country[] = [
     { id: 1001, name: 'Italy', lat: 42, lng: 12 },
     { id: 1002, name: 'usa', lat: 43, lng: 13 },
-    { id: 1002, name: 'Gibuti', lat: 44, lng: 14 },
+    { id: 1003, name: 'Gibuti', lat: 44, lng: 14 },
   ];
   // inizializzazione
   constructor() {
