@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Country } from '../model/country';
 
 @Component({
   selector: 'tabbar',
@@ -13,10 +14,15 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   </div>`,
 })
 export class TabComponent {
-  @Input() items: any;
-  @Output() onTabClick: EventEmitter<any> = new EventEmitter();
+  // inizializzo l items con il construttore
+  constructor() {
+    this.items = [{ id: 1, name: 'ciao', lat: 23, lng: 23 }];
+  }
 
-  itemClickHandler(tab: any) {
+  @Input() items: Country[];
+  @Output() onTabClick: EventEmitter<Country> = new EventEmitter();
+
+  itemClickHandler(tab: Country) {
     // console.loge(tab)
     this.onTabClick.emit(tab);
   }
