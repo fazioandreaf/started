@@ -17,11 +17,12 @@ import { Country } from '../model/country';
 })
 export class TabComponent {
   // inizializzo l items con il construttore,idem per active
+  // dopo il copstruttore viene sovrascritto dall input che si trova nell app.componet,html
   constructor() {
     this.items = [{ id: 1, name: 'ciao', lat: 23, lng: 23 }];
     this.active = { id: 1, name: 'ciao', lat: 23, lng: 23 };
   }
-  active: Country;
+  @Input() active: Country;
   @Input() items: Country[];
   @Output() onTabClick: EventEmitter<Country> = new EventEmitter();
 
@@ -29,6 +30,6 @@ export class TabComponent {
     // console.loge(tab)
     this.onTabClick.emit(tab);
     // gestione della classe
-    this.active = tab;
+    // this.active = tab;
   }
 }
